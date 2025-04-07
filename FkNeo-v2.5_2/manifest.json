@@ -1,0 +1,51 @@
+{
+   "manifest_version": 3,
+   "name": "F**k Neo",
+   "description": "Bypass all the NeoCollab restrictions to cheat in the test. Now copy/paste, switch tab/window etc.\n\n Developed by ErrorxCode",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyXKMSllCpa1zHLw0m7CbO1iAsi0iwQ5Ij45LbZsuvVnmmL0ahjrv+Rfbks1gZ2rE3nqJCvbyT9VUNMGlW9a09BTlRzrm9RhqaAdN6Mg4Y1fEdwQ6fB/UZG5eGEHKUmilxZrkfgfqVwPauLyIYBxTTyIJcYBQvg4mY1WutMpliP2Xbyva2f+t8iiXDer1lvqprNSbFv15bkwz6G5TJxTmvfK/yWKZUqPuI14WPyeo4KO5OA6+5aXONWw6S62n0D8LbadlkQMJM/Tn24tKAjSST0WpIViOn/rNOd/p1lTlrtXD9NkF3jDLblo+H0UwuItl+qhZd2why9tuejHGKWnS/wIDAQAB",
+   "host_permissions": ["https://*/*"],
+   "version": "2.5",
+   "version_name": "Cracked version - v2.5",
+   "action": {
+      "default_icon": {
+         "128": "images/icon128.png",
+         "16": "images/icon16.png",
+         "48": "images/icon48.png"
+      },
+      "default_popup": ""
+   },
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [
+      {
+         "js": ["content-script.js","hooks/ace-mod.js","hooks/bypass.js"],
+         "matches": ["*://*.examly.io/*"],
+         "run_at" : "document_end",
+         "world" : "MAIN",
+         "exclude_matches": ["https://*.examly.io/result*"],
+         "matchOriginAsFallback" : true
+      },
+      {
+         "js": ["hooks/authenticator.js"],
+         "matches": ["*://*.examly.io/*"],
+         "run_at" : "document_end",
+         "world" : "ISOLATED",
+         "matchOriginAsFallback" : true
+      }
+   ],
+   "permissions": [
+      "management",
+      "tabs",
+      "storage"
+   ],
+   "externally_connectable": {
+      "matches": ["*://*.examly.io/*"]
+  }
+}
