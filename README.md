@@ -3,13 +3,18 @@
 
 https://drive.google.com/drive/folders/1XDftvkx7Qqtl9_ROXkXt68yOjlZAknIr
 
+
+
 #FOR WINDOWS
+
+
+
 https://drive.google.com/drive/folders/1Zz2icoyB0eaI2JBJKgP3C8zgAstK2rCs
 
 
 
 
-# NeoSuper
+# NeoSuper lINUX
 
 
  FOR FILE:-
